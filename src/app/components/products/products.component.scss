@@ -1,0 +1,29 @@
+.products {
+  &-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    height: 100%;
+  }
+
+  &-card {
+    max-height: 500px;
+    max-width: 380px;
+    margin-top: 20px;
+    padding: 0px 30px;
+    margin-left: 30px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+}

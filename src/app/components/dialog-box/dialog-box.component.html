@@ -1,0 +1,51 @@
+<h1 mat-dialog-title>Add Product</h1>
+<div mat-dialog-content>
+  <form
+    [formGroup]="productForm"
+    class="add-product-form"
+    (submit)="onSubmitForm()"
+  >
+    <mat-form-field>
+      <mat-label>Product Name</mat-label>
+      <input
+        placeholder="Product name"
+        matInput
+        formControlName="product_name"
+      />
+    </mat-form-field>
+
+    <mat-form-field floatLabel="always">
+      <mat-label>Price</mat-label>
+      <input
+        matInput
+        type="number"
+        class="example-right-align"
+        placeholder="0"
+        formControlName="product_price"
+      />
+      <span matTextPrefix>$&nbsp;</span>
+      <span matTextSuffix>.00</span>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Image Url</mat-label>
+      <input placeholder="Image url" matInput formControlName="product_image" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input
+        placeholder="Description"
+        matInput
+        formControlName="product_description"
+      />
+    </mat-form-field>
+
+    <div class="form-buttons">
+      <button type="button" mat-button mat-dialog-close>Cancel</button>
+      <button mat-button mat-dialog-close cdkFocusInitial type="submit">
+        Add
+      </button>
+    </div>
+  </form>
+</div>
