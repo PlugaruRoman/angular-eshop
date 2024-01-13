@@ -33,4 +33,21 @@ export class ProductsComponent implements OnInit {
 
     this.dialog.open(DialogBoxComponent, dialogConfig);
   }
+
+  onDeleteProduct(id?: number) {
+    if (id) {
+      this.productsService
+        .deleteProduct(id)
+        .subscribe((data) => console.log(data));
+    }
+  }
+
+  onEditProdut(value: any) {
+    const dialogConfig = new MatDialogConfig();
+    console.log(value);
+    dialogConfig.data = {
+      value,
+    };
+    this.dialog.open(DialogBoxComponent, dialogConfig);
+  }
 }

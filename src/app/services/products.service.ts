@@ -17,9 +17,13 @@ export class ProductsService {
     return this.httpClient.get<Product>(`${environment.apiUrl}/products/${id}`);
   }
 
-  addProduct(product: any) {
+  addProduct(product: Product) {
     return this.httpClient
       .post<Product>(`${environment.apiUrl}/products`, product)
       .subscribe((data) => console.log(data));
+  }
+
+  deleteProduct(id: number) {
+    return this.httpClient.delete(`${environment.apiUrl}/products/${id}`);
   }
 }

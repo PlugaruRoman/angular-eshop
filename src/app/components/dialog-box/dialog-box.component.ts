@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -20,6 +20,7 @@ export class DialogBoxComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmitForm() {
-    this.productsService.addProduct(this.productForm.value);
+    console.log(this.productForm.value);
+    // this.productsService.addProduct(this.productForm.value);
   }
 }
